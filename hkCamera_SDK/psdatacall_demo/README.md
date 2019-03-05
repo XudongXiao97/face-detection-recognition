@@ -12,6 +12,6 @@
 case COMM_SNAP_MATCH_ALARM
 case COMM_UPLOAD_FACESNAP_RESULT
 ```
-
+3. 新增人脸录入功能3. 新增人脸录入功能3. 新增人脸录入功能
 
 
