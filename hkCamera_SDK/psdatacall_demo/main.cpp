@@ -76,13 +76,6 @@ FILE *g_pFile = NULL;
 //导入人脸数据条件
 void g_RealDataCallBack_V30(LONG lRealHandle, DWORD dwDataType, BYTE *pBuffer, DWORD dwBufSize, void *dwUser)
 {
-	//LPREAL_PLAY_INFO pPlayInfo = (LPREAL_PLAY_INFO)dwUser;
-	//printf("[g_RealDataCallBack_V30]Get data, ip=%s, channel=%d, handle=%d, data size is %d, thread=%d\n",
-	//pPlayInfo->szIP, pPlayInfo->iChannel, lRealHandle, dwBufSize, pthread_self());
-
-	//printf("[g_RealDataCallBack_V30]Get data, handle=%d, data size is %d, thread=%d\n",
-	//lRealHandle, dwBufSize, pthread_self());
-	//NET_DVR_SaveRealData(lRealHandle, cFilename);
 }
 
 void CALLBACK MessageCallback(LONG lCommand, NET_DVR_ALARMER *pAlarmer, char *pAlarmInfo, DWORD dwBufLen, void *pUser)
@@ -101,8 +94,8 @@ void CALLBACK MessageCallback(LONG lCommand, NET_DVR_ALARMER *pAlarmer, char *pA
 		{
 			switch (struAlarmInfo.dwAlarmType)
 			{
-				case 3:						 //�ƶ���ⱨ��
-					for (i = 0; i < 16; i++) //#define MAX_CHANNUM   16  //���ͨ����
+				case 3:						 
+					for (i = 0; i < 16; i++) //#define MAX_CHANNUM   16  
 					{
 						if (struAlarmInfo.byChannel[i] == 1)
 						{
@@ -171,7 +164,6 @@ void CALLBACK MessageCallback(LONG lCommand, NET_DVR_ALARMER *pAlarmer, char *pA
 
 				HANDLE hFile;
 				DWORD dwReturn;
-				// sprintf(chTime_back, "%4.4d%2.2d%2.2d%2.2d%2.2d%2.2d", struAbsTime.dwYear, struAbsTime.dwMonth, struAbsTime.dwDay, struAbsTime.dwHour, struAbsTime.dwMinute, struAbsTime.dwSecond);
 				sprintf(cnowday, "%4.4d-%2.2d-%2.2d", struAbsTime.dwYear, struAbsTime.dwMonth, struAbsTime.dwDay);
 				sprintf(cSimilariry, "%1.3f", struFaceMatchAlarm.fSimilarity);
 				sprintf(cFilename, "%s_%s_%s_%s_%s.jpg",cIP,chTime_back,strID, NameOut, cSimilariry);
@@ -243,10 +235,7 @@ void CALLBACK MessageCallback(LONG lCommand, NET_DVR_ALARMER *pAlarmer, char *pA
 	}
 }
 
-
-
-
-// Fortify ����
+// Fortify
 int Demo_AlarmFortify(char *DeviceIP, int port, char *userName, char *password)
 {
 	LONG lUserID;
@@ -260,7 +249,6 @@ int Demo_AlarmFortify(char *DeviceIP, int port, char *userName, char *password)
 		NET_DVR_Cleanup();
 		return HPR_ERROR;
 	}
-
 	//cout << "设置回调函数！！！" << endl;
 	NET_DVR_SetDVRMessageCallBack_V30(MessageCallback,NULL);
 	// cout << "回调设置完成！！！" << endl;
@@ -279,7 +267,6 @@ void PsDataCallBack(LONG lRealHandle, DWORD dwDataType, BYTE *pPacketBuffer, DWO
 {
 	if (dwDataType == NET_DVR_SYSHEAD)
 	{
-		//д��ͷ����
 		g_pFile = fopen("/usr/local/icv/HK-face/HK_SDK/psdatacall_demo/record/ps.dat", "wb");
 
 		if (g_pFile == NULL)
@@ -287,8 +274,6 @@ void PsDataCallBack(LONG lRealHandle, DWORD dwDataType, BYTE *pPacketBuffer, DWO
 			printf("CreateFileHead fail\n");
 			return;
 		}
-
-		//д��ͷ����
 		fwrite(pPacketBuffer, sizeof(unsigned char), nPacketSize, g_pFile);
 
 		printf("write head len=%d\n", nPacketSize);
@@ -426,7 +411,6 @@ extern "C" {
 		}
 		return 0;
 	}
-
 
 	int FaceDetectAndContrast(char *DeviceIP, int port, char *userName, char *password)
 	{
