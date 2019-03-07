@@ -21,6 +21,7 @@ logger_main.addHandler(file_handler)
 def customer_face(queue_face, camera_name, camera_pwd, camera_ip):
     previous_working_directory = os.getcwd()
     # python 启动子进程模块subprocess接受 c++ print(信息)
+    # 不是一个好的思路，不过这边总框架是python，要做到信息的调度，目前是这样子做的
     out = subprocess.Popen(
         "python3 {} {} {} {} {}".format("face_match_snap.py", camera_ip, "./psdatacall_demo", camera_name,
                                         camera_pwd),
