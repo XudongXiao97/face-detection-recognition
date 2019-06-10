@@ -1,4 +1,6 @@
-# face-detection-recognition
-Face recognition and face detection algorithm research
+##### face-detection-recognition
 
-1.hkcamera_SDK,主要是通过c++调用海康人脸相机SDK的识别结果。增加python调用结果脚本.
+目前主流人脸识别算法学习以及使用
+
+1.arc_face
+>虹软开源的人脸识别算法，提供离线SDK，目前使用2.0版本，（2.1版本还支持活体检测功能）,在那么多开源的人脸算法中，虹软的效果是最优的。
