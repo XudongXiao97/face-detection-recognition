@@ -4,5 +4,3 @@ OUTPUT_FACE_DICT = {
     "face": "/mnt/HD_2TB/hua/github/face-detection-recognition/mtcnn/output/face",
     "noface": "/mnt/HD_2TB/hua/github/face-detection-recognition/mtcnn/output/noface"
 }
-
-
