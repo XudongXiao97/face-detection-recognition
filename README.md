@@ -11,3 +11,8 @@
 >[海康人脸识别Demo](https://github.com/Jeffer-hua/hk_face)
 >
 >海康人脸识别，算法嵌套硬件设备，通过调用SDK实现人脸识别，资料较为全面，SDK功能完善，可开发性较低，基本需要实现的功能都有SDK封装。
+
+3.mtcnn_facenet
+>[Facenet人脸识别Demo](https://github.com/Jeffer-hua/mtcnn_facenet_learning)
+>
+>mtcnn+facenet人脸识别，可以算是人脸识别目前开源程度最高的人脸识别算法。
