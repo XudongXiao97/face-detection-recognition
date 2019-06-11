@@ -6,3 +6,8 @@
 >[虹软人脸识别Demo](https://github.com/Jeffer-hua/arc_face_learn)
 >
 >虹软开源的人脸识别算法，提供离线SDK，目前使用2.0版本，（2.1版本还支持活体检测功能）,在那么多开源的人脸算法中，虹软的效果是最优的。
+
+2.hk_face
+>[海康人脸识别Demo](https://github.com/Jeffer-hua/arc_face_learn)
+>
+>海康人脸识别，算法嵌套硬件设备，通过调用SDK实现人脸识别，资料较为全面，SDK功能完善，可开发性较低，基本需要实现的功能都有SDK封装。
