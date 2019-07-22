@@ -15,9 +15,9 @@
 3.mtcnn_facenet
 >[Facenet人脸识别Demo](https://github.com/Jeffer-hua/mtcnn_facenet_learning)
 >
->mtcnn+facenet人脸识别，可以算是人脸识别目前开源程度最高的人脸识别算法。
+>mtcnn+facenet人脸识别
 
 4.dlib_face
 >[Dlib人脸识别Demo](https://github.com/Jeffer-hua/dlib_face)
 >
->Dlib人脸识别，入门级别,其中思路值得学习.
+>Dlib人脸识别
